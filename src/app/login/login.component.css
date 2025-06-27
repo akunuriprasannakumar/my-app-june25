@@ -1,0 +1,109 @@
+/* .Login{
+    width: 50%;
+    height: 100%;
+    background-color: blueviolet;
+    text-align: left;
+    padding: 100px;
+    color: white;
+
+}
+#r{
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+#t{
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+    
+}
+button{
+    background-color: green;
+    padding: 15px;
+}
+.s{
+    margin: 20px;
+    border-radius: 20px;
+} */
+
+    /* Full page gradient background */
+body, html {
+  height: 100%;
+  margin: 50%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the login box */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 400px;
+  justify-content: center;
+}
+
+/* Heading */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Label styling */
+.login-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Input fields */
+.login-container input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #163057;
+}
+
+/* Password eye icon styling */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolu
+}

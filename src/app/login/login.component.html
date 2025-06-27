@@ -1,0 +1,54 @@
+<!-- <p>login works!</p>
+<p>login page</p>
+
+<div class="Login">
+    <h1>Login</h1>
+     <label for="username">Username</label><br>
+
+    <input id="r" type="text" placeholder="enter User name"><br>
+    <label for="Password">Password</label><br>
+   
+    <input id="t" type="text" placeholder="enter Password"><br>
+
+    <button class="s">Sign in</button>
+    <p>Forgot password</p>
+    <p>Create An Account</p>
+
+</div> -->
+
+<div class="login-container">
+  <form (ngSubmit)="login()" #loginForm="ngForm">
+    <h2>Login</h2>
+
+    <div>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+        required
+      />
+    </div>
+
+    <div class="password-group">
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+        <span class="eye-icon" (click)="togglePassword()">
+          {{ showPassword ? '🙈' : '👁️' }}
+        </span>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+
+    <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+  </form>
+</div>

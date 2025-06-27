@@ -1,0 +1,59 @@
+<p>directives works!</p>
+
+<h3 *ngIf="false">Hello Everyone</h3>
+<h3 *ngIf="true">Welcome Back!</h3>
+<ol>
+    <li>Andhra Pradesh</li>
+    <li>Telangana</li>
+    <li>Kerala</li>
+    <li>Karnataka</li>
+    <li>Tamil Nadu</li>
+</ol><br>
+
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+<select>
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<ol>
+    <li>India</li>
+    <li>Australia</li>
+    <li>England</li>
+    <li>NewZealand</li>
+    
+</ol><br>
+
+<ol>
+    <li *ngFor="let country of countries">{{country}}
+    </li>
+</ol>
+<select>
+    <option *ngFor="let country of countries">{{country}}</option>
+</select>
+
+<h4>{{date }}</h4>
+<h4>{{date | date}}</h4>
+<h4>{{date | date:'dd/MM/yyyy'}}</h4>
+<h4>{{date | date:'hh:mm:ss'}}</h4>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productName}}</td>
+            <td [ngStyle]="{'color':product.price>20000?'red':'green'}">{{product.price}}</td>
+            <td [ngClass]="{'red':product.rating<3,'orange':((product.rating>=3)&&(product.rating<4)),'green':product.rating>4}">{{product.rating}}</td>
+
+
+        </tr>
+    </tbody>
+</table>

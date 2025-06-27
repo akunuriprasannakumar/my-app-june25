@@ -1,0 +1,14 @@
+<button (click)="click()">Click!</button><br>
+<input type="text" (keyup)="name()"><br>
+<select (change)="click()">
+    <option>AP</option>
+    <option>Telangana</option>
+    <option>Kerala</option>
+    <option>Bengaluru</option>
+</select>
+<h3>Name:{{username}}</h3>
+<h3>Age:{{age}}</h3>
+
+<button [disabled]="isDataPresent">Subscribe</button>
+
+<input type="text" [(ngModel)]="mobile" (keyup)="name()">
