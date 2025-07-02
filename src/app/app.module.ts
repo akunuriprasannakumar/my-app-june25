@@ -10,10 +10,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ClockComponent } from './clock/clock.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
-
+import { TaskComponent } from './task/task.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from "@angular/common/http";
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +28,18 @@ import { EmployeesComponent } from './employees/employees.component';
     ClockComponent,
     DataBindingComponent,
     DirectivesComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    TaskComponent,
+    VehiclesComponent,
+    CreateVehicleComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

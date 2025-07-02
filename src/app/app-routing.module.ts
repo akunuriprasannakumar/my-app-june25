@@ -9,6 +9,9 @@ import { ClockComponent } from './clock/clock.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { TaskComponent } from './task/task.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -18,11 +21,15 @@ const routes: Routes = [
     {path:'Data-Binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'employees',component:EmployeesComponent},
+    {path:'vehicles',component:VehiclesComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent}
   ]},
   {path:'home',component:HomeComponent},
-  {path:'**',component:PageNotFoundComponent},
+  // {path:'**',component:PageNotFoundComponent},
+  {path:'task', component:TaskComponent}
   
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
