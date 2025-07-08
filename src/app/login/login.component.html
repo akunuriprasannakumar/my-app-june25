@@ -1,35 +1,38 @@
-<!-- <p>login works!</p>
-<p>login page</p>
+
+
+<!-- <form class="form" [formGroup]="loginForm">
+
 
 <div class="Login">
     <h1>Login</h1>
      <label for="username">Username</label><br>
 
-    <input id="r" type="text" placeholder="enter User name"><br>
+    <input id="r" type="text" placeholder="enter User name" formControlName="enter User name"><br>
     <label for="Password">Password</label><br>
    
-    <input id="t" type="text" placeholder="enter Password"><br>
+    <input id="t" type="text" placeholder="enter Password" formControlName="password"><br>
 
-    <button class="s">Sign in</button>
+    <button (click)="login()" class="s">Sign in</button>
     <p>Forgot password</p>
     <p>Create An Account</p>
 
-</div> -->
+</div>
+</form> -->
 
 <div class="login-container">
-  <form (ngSubmit)="login()" #loginForm="ngForm">
+  
     <h2>Login</h2>
 
     <div>
+      <form (ngSubmit)="login()"  [formGroup]="loginForm">
       <label for="username">Username</label>
       <input
         type="text"
         id="username"
         name="username"
         [(ngModel)]="username"
-        required
-      />
-    </div>
+        required formControlName="email"
+        >
 
     <div class="password-group">
       <label for="password">Password</label>
@@ -39,7 +42,7 @@
           id="password"
           name="password"
           [(ngModel)]="password"
-          required
+          required formControlName="password"
         />
         <span class="eye-icon" (click)="togglePassword()">
           {{ showPassword ? '🙈' : '👁️' }}
@@ -47,7 +50,8 @@
       </div>
     </div>
 
-    <button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+    <button (click)="signin()" type="submit" [disabled]="!loginForm.valid">Login</button>
+
 
     <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
   </form>

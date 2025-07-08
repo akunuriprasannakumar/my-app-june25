@@ -1,0 +1,35 @@
+.parent{
+  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  
+
+}
+.card{
+  background-color: lightgreen;
+  height: 70%;
+  width: 30%;
+  padding: 30px;
+  margin: 10px;
+  overflow: auto;
+  
+  
+
+}
+img{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+h2{
+  background-color: yellowgreen;
+  display: flex;
+  flex-wrap: wrap;
+}
+p{
+  text-align: center;
+}

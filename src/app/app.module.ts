@@ -17,6 +17,11 @@ import { TaskComponent } from './task/task.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from "@angular/common/http";
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { StudentIdcardsComponent } from './student-idcards/student-idcards.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
+import { RegistrationComponent } from './registration/registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +37,11 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     TaskComponent,
     VehiclesComponent,
     CreateVehicleComponent,
+    CreateStudentComponent,
+    StudentIdcardsComponent,
+    VehicleDetailsComponent,
+    CreateIdcardComponent,
+    RegistrationComponent
 
   ],
   imports: [

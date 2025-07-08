@@ -39,7 +39,8 @@
             <th>Cost</th>
             <th>Fuel</th>
             <th>Image</th>
-            <th>Actions</th>
+            <th colspan="3">Actions</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -47,13 +48,25 @@
             <td>{{vehicle.Vehicle}}</td>
             <td>{{vehicle.color}}</td>
             <td>{{vehicle.cost}}</td>
-            <td>{{vehicle.fuel}}
+            <td>{{vehicle.fuel}}</td>
+
+            <img src="{{vehicle.image}}" alt="" width="100ppx">
+
+            <td>
+                <button class="btn btn-warning" routerLink="/dashboard/edit-vehicle/{{vehicle.id}}">Edit</button></td>
+            <td>
+                 <button class="btn btn-info" routerLink="/dashboard/vehicle-details/{{vehicle.id}}">View</button>
 
             </td>
             <td>
-            <img src="{{vehicle.image}}" alt="" width="100ppx">
+                 <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
             </td>
-            <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete</button>
+            
+            
+            
+            
+            
+            
         </tr>
     </tbody>
 </table>

@@ -12,21 +12,33 @@ import { EmployeesComponent } from './employees/employees.component';
 import { TaskComponent } from './task/task.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { StudentIdcardsComponent } from './student-idcards/student-idcards.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent,children:[
+  {path:'registration', component:RegistrationComponent},
+  {path:'dashboard', component:DashboardComponent, canActivate:[AuthGuard],children:[
     {path:'clock',component:ClockComponent},
     {path:'calculator',component:CalculatorComponent},
     {path:'Data-Binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'employees',component:EmployeesComponent},
     {path:'vehicles',component:VehiclesComponent},
-    {path:'create-vehicle',component:CreateVehicleComponent}
+    {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'create-student', component:CreateStudentComponent},
+    {path:'student-idcards',component:StudentIdcardsComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id', component:CreateVehicleComponent},
+    {path:'create-idcard/:id', component:CreateIdcardComponent}
   ]},
   {path:'home',component:HomeComponent},
-  // {path:'**',component:PageNotFoundComponent},
-  {path:'task', component:TaskComponent}
+  {path:'task', component:TaskComponent},
+  {path:'**',component:PageNotFoundComponent},
   
 ];
 

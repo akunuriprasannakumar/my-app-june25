@@ -1,0 +1,77 @@
+<p>create-student works!</p>
+
+    <form [formGroup]="studentForm">
+    <label>Enter name:</label>
+    <input type="text" formControlName="name"><br>
+
+    <div *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.invalid">
+        <p *ngIf="studentForm.get('name')?.errors?.['required']">Name should be enter</p>
+        <p *ngIf="studentForm.get('name')?.errors?.['minlength']">Name should be minimum 6 characters</p>
+        <p *ngIf="studentForm.get('name')?.errors?.['maxlength']">Name should be maximum 12 characters</p>
+
+    </div>
+
+     <label>Enter age:</label>
+    <input type="number" formControlName="age"><br>
+
+     <label>Enter mobile:</label>
+    <input type="number" formControlName="mobile"><br>
+
+     <label>Enter email:</label>
+    <input type="text" formControlName="email"><br>
+
+    <div formGroupName="address">
+
+        <label>Enter city:</label>
+    <input type="text" formControlName="city"><br>
+
+     <label>Enter state:</label>
+    <input type="text" formControlName="state"><br>
+
+     <label>Enter Pincode:</label>
+    <input type="number" formControlName="pin"><br>
+    </div>
+
+    <label>Are You?:</label>
+    <input type="radio" formControlName="type" [value]="true">
+    <label>Day Scholar</label>
+    <input type="radio" formControlName="type" [value]="false">
+    <label>Resedential</label><br>
+
+    <div *ngIf="studentForm.get('type')?.value==false">
+        <label >Hostel Fee</label>
+        <input type="number" formControlName="hostelFee"><br>
+    </div>
+
+    <div *ngIf="studentForm.get('type')?.value==true">
+        <label >Bus Fee</label>
+        <input type="number" formControlName="busFee"><br>
+    </div>
+
+    <button class="btn-primary" (click)="add()">Add card</button>
+
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <h3>Card{{i+1}}</h3>
+                
+
+                <label>Card Number:</label>
+                <input type="number" formControlName="number"><br>
+
+                <label>expiry month:</label>
+                <input type="month" formControlName="expiry"><br>
+
+                <label>CVV:</label>
+                <input type="number" formControlName="cvv"><br>
+                <button (click)="delete(i)" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+    
+    <button (click)="submit()" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
