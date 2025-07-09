@@ -23,6 +23,8 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { EmailComponent } from './email/email.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,9 @@ import { EmailComponent } from './email/email.component';
     VehicleDetailsComponent,
     CreateIdcardComponent,
     RegistrationComponent,
-    EmailComponent
+    EmailComponent,
+    ParentComponent,
+    ChildComponent
 
   ],
   imports: [
