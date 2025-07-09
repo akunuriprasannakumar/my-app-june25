@@ -9,12 +9,12 @@
 
 }
 .card{
-  background-color: lightgreen;
+  background: linear-gradient(orange,violet,green);
   height: 70%;
   width: 30%;
   padding: 30px;
   margin: 10px;
-  overflow: auto;
+
   
   
 
@@ -26,10 +26,29 @@ img{
   flex-wrap: wrap;
 }
 h2{
-  background-color: yellowgreen;
+  
   display: flex;
-  flex-wrap: wrap;
+  
+  
 }
 p{
   text-align: center;
+  margin: auto;
+}
+.delete{
+  display: flex;
+  gap: 10px;
+}
+.image{
+  width: 30%;
+  height: 30%;
+  display: flex;
+  
+  
+  
+}
+.school{
+  display: flex;
+  margin: auto;
+  
 }

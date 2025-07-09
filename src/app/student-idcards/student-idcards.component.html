@@ -38,24 +38,35 @@
   
   
   <div *ngFor="let student of students" class="card">
-    <div>
-      <img src="{{student.school_logo}}" alt="">
+    <div class="school">
+    <div class="image">
+      <img src="{{student.school_logo}}" alt=""><br>
 
     </div>
-    <!-- <img src="{{student.profile_picture}}" alt=""> -->
-   <div>
-
     
-  <h2>{{student.school_name}}</h2>
+   <div class="school">
+     <h2>{{student.school_name}}</h2>
+     <hr>
   </div>
-  
-  <p>{{student.name}}</p>
-  <p>{{student.city}}</p>
-  <p>{{student.email}}</p>
-  <p>{{student.dob}}</p>
-  <button (click)="delete(student.id)" class="btn btn-danger">Delete</button>
-  <button class="btn btn-warning" routerLink="/dashboard/create-idcard/{{student.id}}">Edit</button>
-  <button class="btn btn-info" routerLink="/dashboard/create-idcard/{{student.id}}">View</button>
+</div>
+
+<div class="image">
+  <img src="{{student.profile_picture}}" alt="">
+
+  <div>
+    <p>{{student.name}}</p>
+    <p>{{student.city}}</p>
+    <p>{{student.email}}</p>
+    <p>{{student.dob}}</p>
+  </div>
+</div>
+
+   <div class="delete">
+
+  <button (click)="delete(student.id)" class="btn btn-danger">Delete</button><br>
+  <button class="btn btn-warning" routerLink="/dashboard/create-idcard/{{student.id}}">Edit</button><br>
+  <button class="btn btn-info" routerLink="/dashboard/create-idcard/{{student.id}}">View</button><br>
+  </div>
   </div>
 
   

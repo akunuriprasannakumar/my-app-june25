@@ -22,6 +22,7 @@ import { StudentIdcardsComponent } from './student-idcards/student-idcards.compo
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { EmailComponent } from './email/email.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { RegistrationComponent } from './registration/registration.component';
     StudentIdcardsComponent,
     VehicleDetailsComponent,
     CreateIdcardComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    EmailComponent
 
   ],
   imports: [

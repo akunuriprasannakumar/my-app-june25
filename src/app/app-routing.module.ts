@@ -18,6 +18,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
+import { EmailComponent } from './email/email.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -34,7 +35,8 @@ const routes: Routes = [
     {path:'student-idcards',component:StudentIdcardsComponent},
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path:'edit-vehicle/:id', component:CreateVehicleComponent},
-    {path:'create-idcard/:id', component:CreateIdcardComponent}
+    {path:'create-idcard/:id', component:CreateIdcardComponent},
+    {path:'email', component:EmailComponent}
   ]},
   {path:'home',component:HomeComponent},
   {path:'task', component:TaskComponent},
