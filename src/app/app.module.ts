@@ -25,6 +25,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { EmailComponent } from './email/email.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { RatingComponent } from './rating/rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +51,11 @@ import { ChildComponent } from './child/child.component';
     RegistrationComponent,
     EmailComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    FlipkartComponent,
+    RatingComponent
 
   ],
   imports: [

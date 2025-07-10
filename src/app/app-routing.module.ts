@@ -20,6 +20,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
 import { EmailComponent } from './email/email.component';
 import { ParentComponent } from './parent/parent.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -38,7 +40,10 @@ const routes: Routes = [
     {path:'edit-vehicle/:id', component:CreateVehicleComponent},
     {path:'create-idcard/:id', component:CreateIdcardComponent},
     {path:'email', component:EmailComponent},
-    {path:'parent',component:ParentComponent}
+    {path:'parent',component:ParentComponent},
+    {path:'sibling1',component:Sibling1Component},
+    {path:'flipkart',component:FlipkartComponent},
+    
   ]},
   {path:'home',component:HomeComponent},
   {path:'task', component:TaskComponent},

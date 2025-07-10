@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Flipkart</h1>
+
+
+
+<div class="parent">
+<div *ngFor="let flipkart of flipkarts" class="parent1">
+
+        <img src="{{flipkart.image}}" alt="" height="200px" width="200px">
+        <h3>{{flipkart.category}}</h3>
+        <p>{{flipkart.title}}</p>
+        <p style="color: red; padding-left: 10px;">{{flipkart.price}}</p>
+        <div class="rating">
+        <app-rating [rating]="flipkart.rating.rate"></app-rating>
+        </div>
+
+
+</div>
+</div>
