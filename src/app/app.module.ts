@@ -15,7 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { TaskComponent } from './task/task.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { StudentIdcardsComponent } from './student-idcards/student-idcards.component';
@@ -29,6 +29,10 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { RatingComponent } from './rating/rating.component';
+import { CapitalDirective } from './capital.directive';
+import { RupeePipe } from './rupee.pipe';
+import { AuthInterceptor } from './auth.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +59,9 @@ import { RatingComponent } from './rating/rating.component';
     Sibling1Component,
     Sibling2Component,
     FlipkartComponent,
-    RatingComponent
+    RatingComponent,
+    CapitalDirective,
+    RupeePipe
 
   ],
   imports: [
@@ -63,9 +69,16 @@ import { RatingComponent } from './rating/rating.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

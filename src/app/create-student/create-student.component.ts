@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MohithMail } from '../clock/validators';
 
 @Component({
   selector: 'app-create-student',
@@ -11,7 +12,7 @@ export class CreateStudentComponent {
     name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)]),
     age:new FormControl(),
     mobile:new FormControl(),
-    email:new FormControl(),
+    email:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(24),MohithMail]),
     address:new FormGroup({
       city:new FormControl(),
       state:new FormControl(),
