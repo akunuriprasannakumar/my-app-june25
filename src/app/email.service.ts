@@ -6,12 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailService {
+ constructor(private _httpClient:HttpClient) { }
 
-  constructor(private _httpClient:HttpClient) { }
-
-  getemail():Observable<any>{
-    return this._httpClient.get("https://jsonplaceholder.typicode.com/todos");
+  getMail():Observable<any>{
+      return this._httpClient.get("https://jsonplaceholder.typicode.com/todos")
   }
-  
-
 }

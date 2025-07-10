@@ -7,19 +7,17 @@ import { EmailService } from '../email.service';
   styleUrls: ['./email.component.css']
 })
 export class EmailComponent {
-  email:any[]=[]
-emails: any;
-
-
-  constructor(private _emailService:EmailService){
-    _emailService.getemail().subscribe(
+  mail:any[]=[]
+constructor(_mailService:EmailService){
+  _mailService.getMail().subscribe(
       (data:any)=>{
         console.log(data);
-        this.email=data;
+        this.mail=data;
+
       },(err:any)=>{
-        alert("Internal server error");
+        alert("Internal Server Error!");
       }
+
     )
   }
-
 }

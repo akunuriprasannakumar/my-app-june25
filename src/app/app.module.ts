@@ -23,6 +23,12 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { CreateIdcardComponent } from './create-idcard/create-idcard.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { EmailComponent } from './email/email.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { RatingComponent } from './rating/rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +49,13 @@ import { EmailComponent } from './email/email.component';
     VehicleDetailsComponent,
     CreateIdcardComponent,
     RegistrationComponent,
-    EmailComponent
+    EmailComponent,
+    ParentComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    FlipkartComponent,
+    RatingComponent
 
   ],
   imports: [

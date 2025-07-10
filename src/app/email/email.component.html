@@ -3,9 +3,16 @@
     <p>{{email.title}}</p>
 </div> -->
 
-<ol>
-  <li *ngFor="let email of emails">
-    <p>{{ email.title }}</p>
+<!-- <ol>
+  <li *ngFor="let email of emails" {{ email.title }}></li>
     
-  </li>
+    
+  
+</ol> -->
+
+<h1>Email</h1>
+<div class="main">
+<ol>
+    <li *ngFor="let mails of mail" [ngStyle]="{'color':mails.completed==false?'black':'gray'}">{{mails.title}}</li>
 </ol>
+</div>
