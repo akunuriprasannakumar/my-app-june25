@@ -33,6 +33,7 @@ import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
 import { AuthInterceptor } from './auth.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
+import { WeatherComponent } from './weather/weather.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { AboutUsModule } from './about-us/about-us.module';
     FlipkartComponent,
     RatingComponent,
     CapitalDirective,
-    RupeePipe
+    RupeePipe,
+    WeatherComponent
 
   ],
   imports: [

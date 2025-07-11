@@ -22,6 +22,7 @@ import { EmailComponent } from './email/email.component';
 import { ParentComponent } from './parent/parent.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { WeatherComponent } from './weather/weather.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -43,6 +44,7 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'sibling1',component:Sibling1Component},
     {path:'flipkart',component:FlipkartComponent},
+    {path:'weather',component:WeatherComponent}
     
   ]},
   {path:'home',component:HomeComponent},
