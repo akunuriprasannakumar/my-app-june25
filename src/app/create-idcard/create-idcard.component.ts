@@ -23,6 +23,9 @@ export class CreateIdcardComponent {
       // cards: new FormArray([]),
   
     })
+  fb: any;
+  form: any;
+  cards: any;
   
     get cardsFormArray(){
       return this.studentForm.get('cards') as FormArray;
