@@ -20,7 +20,7 @@ export class CreateIdcardComponent {
       type:new FormControl(),
       // hostelFee:new FormControl(),
       // busFee:new FormControl()
-      // cards: new FormArray([]),
+       cards: new FormArray([]),
   
     })
   fb: any;

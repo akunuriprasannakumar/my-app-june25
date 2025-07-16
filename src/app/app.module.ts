@@ -34,6 +34,12 @@ import { RupeePipe } from './rupee.pipe';
 import { AuthInterceptor } from './auth.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
 import { WeatherComponent } from './weather/weather.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import { StoreModule, StoreRootModule } from '@ngrx/store';
+import { countReducer } from './store/counter.reducer';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +69,9 @@ import { WeatherComponent } from './weather/weather.component';
     RatingComponent,
     CapitalDirective,
     RupeePipe,
-    WeatherComponent
+    WeatherComponent,
+    AdminComponent,
+    UserComponent
 
   ],
   imports: [
@@ -72,7 +80,8 @@ import { WeatherComponent } from './weather/weather.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutUsModule
+    AboutUsModule,
+    StoreModule.forRoot({counter:countReducer}, {}),
   ],
   providers: [
     {

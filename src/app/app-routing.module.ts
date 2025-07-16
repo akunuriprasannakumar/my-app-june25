@@ -29,6 +29,7 @@ const routes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'dashboard', component:DashboardComponent, canActivate:[AuthGuard],children:[
     {path:'clock',component:ClockComponent},
+    {path:'home',component:HomeComponent},
     {path:'calculator',component:CalculatorComponent},
     {path:'Data-Binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
