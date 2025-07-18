@@ -38,6 +38,9 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { StoreModule, StoreRootModule } from '@ngrx/store';
 import { countReducer } from './store/counter.reducer';
+import { ContentComponent } from './content/content.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -71,7 +74,10 @@ import { countReducer } from './store/counter.reducer';
     RupeePipe,
     WeatherComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    ContentComponent,
+    HeaderComponent,
+    FooterComponent
 
   ],
   imports: [
